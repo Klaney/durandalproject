@@ -17,10 +17,12 @@
   },
   "homepage": "https://github.com/Klaney/durandalproject#readme",
   "dependencies": {
+    "bcrypt": "^0.8.5",
     "body-parser": "^1.15.0",
     "durandal": "^2.1.0",
     "express": "^4.13.4",
     "knockout": "^3.4.0",
+    "mongoose": "^4.4.12",
     "require": "^2.4.20"
   }
 }
