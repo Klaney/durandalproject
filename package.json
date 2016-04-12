@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/Klaney/durandalproject/issues"
   },
-  "homepage": "https://github.com/Klaney/durandalproject#readme"
+  "homepage": "https://github.com/Klaney/durandalproject#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "durandal": "^2.1.0",
+    "express": "^4.13.4",
+    "knockout": "^3.4.0",
+    "require": "^2.4.20"
+  }
 }
