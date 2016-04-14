@@ -19,8 +19,10 @@
   "dependencies": {
     "bcrypt": "^0.8.5",
     "body-parser": "^1.15.0",
+    "connect-livereload": "^0.5.4",
     "durandal": "^2.1.0",
     "express": "^4.13.4",
+    "gulp-express": "^0.3.5",
     "knockout": "^3.4.0",
     "mongoose": "^4.4.12",
     "path": "^0.12.7",
