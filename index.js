@@ -11,6 +11,7 @@ mongoose.connect('mongodb://localhost/test');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(__dirname + '/static'));
 app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public/auth'));
 app.use(require('connect-livereload')());
 
 db.on('error', function(){
@@ -23,6 +24,8 @@ db.once('open', function() {
 app.get('/', function(req, res){
 	res.render('index.html')
 });
+
+app.use('/auth', require('./controllers/auth'));
 
 app.listen(3000);
 
