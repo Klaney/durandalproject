@@ -23,8 +23,13 @@
 	color: black;
 }
 
-.nav-items a:nth-child(2n+2){
-	background-color: red;
+.nav-item:hover {
+	background-color: black;
+	color:#B5B5B5;
+}
+
+.form-title {
+	text-align: center;
 }
 
 table {
@@ -45,4 +50,8 @@ th {
 td {
 	border: 1px solid gray;
 	padding: 0.5em 1em 0.5em 1em;
+}
+
+input {
+	
 }

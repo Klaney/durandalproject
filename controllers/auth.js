@@ -1,7 +1,8 @@
 var express = require('express'),
 	User = require('../models/user'),
 	app = module.exports.app = exports.app = express(),
-	router = express.Router();
+	router = express.Router(),
+	flash = require('connect-flash');
 
 router.route('/signup')
 	.post(function(req, res){
@@ -22,14 +23,17 @@ router.route('/login')
 		}
 		User.findOne({username:loginUser.username}, function(err, user){
 			if (err) return res.status(500).send(err);
-			console.log(user);
-			user.comparePassword(loginUser.password, function(err, match){
-				if (err) throw err;
-				console.log(user.password + ":" + match)
-				if(match){
-					res.redirect('/#retrieve')
-				}
-			})
+			if(!user){
+				res.redirect("/");
+			} else{
+				user.comparePassword(loginUser.password, function(err, match){
+					if (err) throw err;
+					console.log(user.password + ":" + match)
+					if(match){
+						res.redirect('/#retrieve');
+					}
+				})	
+			}
 		});
 	});
 
