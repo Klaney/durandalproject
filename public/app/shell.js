@@ -1,11 +1,16 @@
 define(function (require) {
-  var app = require('durandal/app'),
-    ko = require('knockout');
+  var router = require('plugins/router');
  
   return {
-    name: ko.observable(),
-    sayHello: function() {
-      app.showMessage('Hello ' + this.name() + '! Nice to meet you.', 'Greetings');
+    router: router,
+    activate: function () {
+      router.map([
+        { route: '', title:'Home', moduleId: 'home', nav: true },
+        { route:'auth/signup', title:'Signup', moduleId:'signup', nav:true },
+        { route:'auth/login', title:'Login', moduleId:'login', nav:true }
+      ]).buildNavigationModel();
+
+     	return router.activate();
     }
   };
 });
