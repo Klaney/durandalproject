@@ -2,3 +2,29 @@
 	margin-top: 10%;
 	position: relative;
 }
+
+.centering-div {
+	display: flex;
+	justify-content: center;
+}
+
+.table-title {
+	text-align: center;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+th {
+	border:1px solid red;
+	padding: 0.5rem;
+}
+thead {
+	border: 1px solid red;
+}
+
+td {
+	border: 1px solid blue;
+	padding: 0.5rem;
+}

@@ -1,0 +1,27 @@
+<section>
+  <h2 class="table-title">All Incidents</h2>
+  <div class="centering-div">
+  	<table>
+  		<thead>
+  			<tr>
+  				<th>Reference #</th>
+  				<th>Summary</th>
+  				<th>Current Status</th>
+  				<th>Logged</th>
+  				<th>End User</th>
+  				<th>Minutes to Breach</th>
+  			</tr>
+  		</thead>
+  		<tbody data-bind="foreach: incidents">
+  			<tr>
+  				<td data-bind="text: referenceNumber"></td>
+  				<td data-bind="text: summary"></td>
+  				<td data-bind="text: currentStatus"></td>
+  				<td data-bind="text: logged"></td>
+  				<td data-bind="text: endUser"></td>
+  				<td data-bind="text: minutesToBreach"></td>
+  			</tr>
+  		</tbody>
+  	</table>
+  </div>
+</section>
