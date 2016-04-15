@@ -6,7 +6,8 @@ var express = require("express"),
 	mongoose = require('mongoose'),
 	db = mongoose.connection,
 	User = require('./models/user'),
-	ManagementIncident = require('./models/managementincident');
+	ManagementIncident = require('./models/managementincident')
+	moment = require('moment');
 
 mongoose.connect('mongodb://localhost/test');
 app.use(bodyParser.urlencoded({extended: false}));
@@ -36,25 +37,24 @@ app.get('/allmi', function(req, res){
 	})
 })
 
-// var addItems = function(){
-// 	for(var i = 0; i < 15; i++){
-// 	var newIncident = {};
-// 	newIncident.referenceNumber = i;
-// 	newIncident.summary = "incident" + i;
-// 	newIncident.currentStatus = "Awaiting Response";
-// 	newIncident.endUser = "SA";
-// 	newIncident.minutesToBreach = 1;
-// 	ManagementIncident.create(newIncident, function(err, incident){
-// 		if(err) {
-// 			res.send(err)
-// 		}
-// 		if(incident){
-// 			console.log(incident);
-// 		}
-// 	})
-// 	}
-// }
-// addItems();
+var addItems = function(){
+	for(var i = 0; i < 15; i++){
+	var newIncident = {};
+	newIncident.referenceNumber = i;
+	newIncident.summary = "incident" + i;
+	newIncident.currentStatus = "Awaiting Response";
+	newIncident.endUser = "SA";
+	newIncident.minutesToBreach = 1;
+	ManagementIncident.create(newIncident, function(err, incident){
+		if(err) {
+			res.send(err)
+		}
+		if(incident){
+			console.log(incident);
+		}
+	})
+	}
+}
 
 app.use('/auth', require('./controllers/auth'));
 

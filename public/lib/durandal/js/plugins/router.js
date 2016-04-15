@@ -667,8 +667,9 @@ define(['durandal/system', 'durandal/app', 'durandal/activator', 'durandal/event
          * @param {object} instruction The routing instruction associated with the action. It has a `config` property that references the original route mapping config.
          */
         router.updateDocumentTitle = function (instance, instruction) {
-            var appTitle = ko.unwrap(app.title),
-                title = instruction.config.title;
+            var appTitle = "Keaton Durandal App",
+                //title = instruction.config.title,
+                title = null;;
                 
             if (titleSubscription) {
                 titleSubscription.dispose();

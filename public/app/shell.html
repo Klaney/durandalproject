@@ -1,6 +1,6 @@
 <div>
 	<div class="navbar navbar-fixed-top">
-	  <div class="navbar-inner">
+	  <!-- <div class="navbar-inner">
 	    <ul class="nav" data-bind="foreach: router.navigationModel">
 	    	<li data-bind="css: { active: isActive }">
 	     		<a data-bind="attr: { href: hash }, html: title"></a>
@@ -9,7 +9,12 @@
 	    <div class="loader pull-right" data-bind="css: { active: router.isNavigating }">
 	     	<i class="icon-spinner icon-2x icon-spin"></i>
 	    </div>
+	  </div> -->
+	  <div class="navbar-inner" data-bind="foreach: router.navigationModel">
+	  	<div class="nav-items" data-bind="css: { active: isActive}">
+	  		<a class="nav-item" data-bind="attr:{href: hash}, html: title"></a>
+	  	</div>
 	  </div>
 	</div>
-	<div class="container-fluid page-host" data-bind="router: { transition:'entrance' }"></div>
+	<div class="container-fluid page-host" data-bind="router: { cacheViews: false }"></div>
 </div>

@@ -9,7 +9,7 @@ router.route('/signup')
 			if(err) return res.status(500).send(err);
 			if(user){
 				user.save();
-				res.send(user);
+				res.redirect("/#auth/login");
 			}
 		});
 	});
@@ -27,7 +27,7 @@ router.route('/login')
 				if (err) throw err;
 				console.log(user.password + ":" + match)
 				if(match){
-					res.redirect('/')
+					res.redirect('/#retrieve')
 				}
 			})
 		});

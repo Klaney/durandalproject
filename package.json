@@ -24,6 +24,7 @@
     "express": "^4.13.4",
     "gulp-express": "^0.3.5",
     "knockout": "^3.4.0",
+    "moment": "^2.12.0",
     "mongoose": "^4.4.12",
     "path": "^0.12.7",
     "require": "^2.4.20"

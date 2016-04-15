@@ -8,7 +8,7 @@ define(function (require) {
         { route: '', title:'Home', moduleId: 'home', nav: true },
         { route:'auth/signup', title:'Signup', moduleId:'signup', nav:true },
         { route:'auth/login', title:'Login', moduleId:'login', nav:true },
-        { route:'retrieve', title:'All the Incidents', moduleId:'allincidents', nav:true}
+        { route:'retrieve', title:'All the Incidents', moduleId:'allincidents', nav:false}
       ]).buildNavigationModel();
 
      	return router.activate();

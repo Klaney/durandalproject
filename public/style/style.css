@@ -12,19 +12,37 @@
 	text-align: center;
 }
 
+.nav-item {
+	box-sizing: border-box;
+	width: 33.33333333%;
+	float: left;
+	text-align: center;
+	background-color: #B5B5B5;
+	font-size: 2em;
+	text-decoration: none !important;
+	color: black;
+}
+
+.nav-items a:nth-child(2n+2){
+	background-color: red;
+}
+
 table {
 	border-collapse: collapse;
 }
 
 th {
-	border:1px solid red;
-	padding: 0.5rem;
+	border: 1px solid gray;
+	padding: 0.5em 1em 0.5em 1em;
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		right bottom,
+		color-stop(0, #FFFFFF),
+		color-stop(1, #E4EBEA)
+	);
 }
-thead {
-	border: 1px solid red;
-}
-
 td {
-	border: 1px solid blue;
-	padding: 0.5rem;
+	border: 1px solid gray;
+	padding: 0.5em 1em 0.5em 1em;
 }

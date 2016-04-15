@@ -1,5 +1,6 @@
 var mongoose = require('mongoose'), 
-	Schema = mongoose.Schema;
+	Schema = mongoose.Schema
+	moment = require('moment');
 
 var ManagementIncidentSchema = mongoose.Schema({
   referenceNumber: Number,
@@ -7,7 +8,7 @@ var ManagementIncidentSchema = mongoose.Schema({
   currentStatus: String,
   endUser: String,
   minutesToBreach: Number,
-  logged: { type: Date, 'default': Date.now }
+  logged: { type: String, 'default': moment().format('MM/DD/YYYY h:mm:ssa') }
 });
 
 module.exports = mongoose.model('ManagementIncidentSchema', ManagementIncidentSchema);

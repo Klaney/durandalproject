@@ -1,6 +1,7 @@
 define(function (require) {
   var http = require('plugins/http'),
-      ko = require('knockout');
+      ko = require('knockout'),
+      moment = require('moment');
  
   var url = '/allmi';
  
@@ -14,7 +15,6 @@ define(function (require) {
  
       return http.get(url).then(function(response) {
         that.incidents(response);
-        console.log(response);
       });
      }
    };
