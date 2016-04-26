@@ -20,7 +20,7 @@ router.route('/login')
 		var loginUser = {
 			username: req.body.username,
 			password: req.body.password
-		}
+		};
 		User.findOne({username:loginUser.username}, function(err, user){
 			if (err) return res.status(500).send(err);
 			if(!user){

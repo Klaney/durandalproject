@@ -49,14 +49,14 @@ var addItems = function(){
 		newIncident.minutesToBreach = 1;
 		ManagementIncident.create(newIncident, function(err, incident){
 			if(err) {
-				res.send(err)
+				res.send(err);
 			}
 			if(incident){
 				console.log(incident);
 			}
-		})
+		});
 	}
-}
+};
 
 app.use('/auth', require('./controllers/auth'));
 
